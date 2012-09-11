@@ -1,0 +1,48 @@
+/* CSS declarations go here */
+
+.column, .header, .footer {
+  p, h1 {
+		color: white;
+		padding: 40px;
+	}
+}
+
+h1                     {  }
+.row, .header, .footer { text-align: center; }
+.left                  { background: blue; }
+.right                 { background: red; }
+.center                { background: pink; }
+.header                { background: purple; }
+.footer                { background: green; }
+
+input, textarea {
+	padding: 8px;
+}
+
+.left, .right {
+	input {
+		text-align: center;
+	}
+}
+
+
+/* CSS for footer copied from http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+
+.footer, .push {
+	height: 8em;
+}

@@ -1,0 +1,56 @@
+<head>
+  <title>zipwith</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header">
+			{{> header}}
+		</div>
+		{{> body}}
+		<div class="push"></div>
+	</div>
+	<div class="footer">
+			{{> footer}}
+	</div>
+</body>
+
+<template name="header">
+	<h1> zipWith :: (a -&gt; b -&gt; c) -&gt; [a] -&gt; [b] -&gt; [c] </h1>
+</template>
+
+<template name="footer">
+	<p>Copyright (c) 2008</p>
+</template>
+
+<template name="body">
+	<div class="container">
+		<div class="row">
+			<div class="center column span6 offset3" id="zipper">{{> zipper }}</div>
+		</div>
+		<div class="row">
+			<div class="span6 column left" id="left">{{> left }}</div>
+			<div class="span6 column right" id="right">{{> right }}</div>
+		</div>
+	</div>
+</template>
+
+<template name="zipper">
+	<p>
+		<textarea class="span4 offset1">Zipper</textarea>
+	</p>
+</template>
+
+<template name="left">
+	<p>
+		<input type="text" value="URL" class="url span5" />
+		<input type="text" value="Selector" class="selector span5" />
+	</p>
+</template>
+
+<template name="right">
+	<p>
+		<input type="text" value="URL" class="url span5" />
+		<input type="text" value="Selector" class="selector span5" />
+	</p>
+</template>
