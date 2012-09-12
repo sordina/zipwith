@@ -29,8 +29,8 @@
 			<div class="center column span6 offset3" id="zipper">{{> zipper }}</div>
 		</div>
 		<div class="row">
-			<div class="span6 column left" id="left">{{> left }}</div>
-			<div class="span6 column right" id="right">{{> right }}</div>
+			<div class="span6 column left"  id="left">{{> source }}</div>
+			<div class="span6 column right" id="right">{{> source }}</div>
 		</div>
 	</div>
 </template>
@@ -41,16 +41,17 @@
 	</p>
 </template>
 
-<template name="left">
+<template name="source">
 	<p>
-		<input type="text" value="URL" class="url span5" />
-		<input type="text" value="Selector" class="selector span5" />
+		{{#constant}}
+			<input type="text" value="URL" class="url span5" />
+			<input type="text" value="Selector (Default: p)" class="selector span5" />
+		{{/constant}}
 	</p>
-</template>
-
-<template name="right">
-	<p>
-		<input type="text" value="URL" class="url span5" />
-		<input type="text" value="Selector" class="selector span5" />
-	</p>
+	{{#each scrapes}}
+		<h4>{{url}}</h4>
+		{{#each items}}
+			<pre>{{html}}</pre>
+		{{/each}}
+	{{/each}}
 </template>
